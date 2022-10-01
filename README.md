@@ -3,7 +3,7 @@
 Argo CD Notifications continuously monitors Argo CD applications and provides a flexible way to notify users about important changes in the application state. 
 
 ## Triggers:
-The trigger defines the condition when the notification should be sent. The definition includes name `(trigger.*)`, condition `(when)` and notification templates reference `(send)`.
+The trigger defines the condition when the notification should be sent. The definition includes name `trigger.*`, condition `when` and notification templates reference `send`.
 
 ## Templates
 The notification template is used to generate the notification content. 
