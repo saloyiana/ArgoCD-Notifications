@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-notifications-cm
+data:
+  # Email notification service Registering
+  service.email.gmail: |
+    username: xxxxx@gmail.com
+    password: ##app-password##
+    host: smtp.gmail.com
+    port: 465
+    from: xxxxx@gmail.com
+  # Templates
+  template.app-sync-status: |
+    email:
+      subject: Application {{.app.metadata.name}} Status.
+    message: |
+      Application {{.app.metadata.name}} status {{.app.status.sync.status}} at {{.app.status.operationState.finishedAt}}.
+  # Triggers
+  trigger.sync-status: |
+    - description: Application status is OutOfSync
+      send:
+      - app-sync-status
+      when: app.status.sync.status == 'OutOfSync'
+    - description: Application status is Synced
+      send:
+      - app-sync-status
+      when: app.status.sync.status == 'Synced'
