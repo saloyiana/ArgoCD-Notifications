@@ -11,7 +11,7 @@ The notification template is used to generate the notification content.
 triggers and templates are configured in argocd-notifications-cm ConfigMap.
 
 ### Example:
-The below example is used to send an email notification when the applications status is Synced or OutOfSync
+The below example is used to send an email notification when the applications status is *Synced* or *OutOfSync*
 ```
 apiVersion: v1
 kind: ConfigMap
@@ -45,6 +45,9 @@ data:
 Next Step, to subscribe to notifications by annotating the Argo CD application or project
 `notifications.argoproj.io/subscribe.<trigger.name>.gmail":"xxxx@gmail.com`
 
+### Images: 
+![synced](IMG-4243.jpg)
+![outofsync](IMG-4244.jpg)
 
 Operational commands: 
 - To troubleshoot: 
