@@ -10,7 +10,7 @@ The notification template is used to generate the notification content.
 
 triggers and templates are configured in argocd-notifications-cm ConfigMap.
 
-### Example:
+## Example:
 The below example is used to send an email notification when the applications status is *Synced* or *OutOfSync*
 ```
 apiVersion: v1
@@ -49,10 +49,10 @@ Next Step, to subscribe to notifications by annotating the Argo CD application o
 <img src="IMG-4243.jpg" width="300"> 
 <img src="IMG-4244.jpg" width="300"> 
 
-Operational commands: 
-- To troubleshoot: 
+## Operational commands: 
+- To troubleshoot:   
 `kubectl logs -f -n argocd <po>`
-- To subscribe to the notifications: 
+- To subscribe to the notifications:   
 `kubectl patch app <app-name> -n argocd -p '{"metadata": {"annotations": {"notifications.argoproj.io/subscribe.<trigger.name>.gmail":"xxxx@gmail.com"}}}' --type merge`
 
 # References:
