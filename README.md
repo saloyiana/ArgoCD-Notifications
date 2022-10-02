@@ -46,8 +46,7 @@ Next Step, to subscribe to notifications by annotating the Argo CD application o
 `notifications.argoproj.io/subscribe.<trigger.name>.gmail":"xxxx@gmail.com`
 
 ### Images: 
-![synced](IMG-4243.jpg =100x20)
-![outofsync](IMG-4244.jpg =100x20)
+<img src="IMG-4243.jpg" width="200">
 
 Operational commands: 
 - To troubleshoot: 
